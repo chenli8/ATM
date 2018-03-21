@@ -1,0 +1,98 @@
+/**-----------------------------表单通用样式 -------------------------------**/
+.form-wrapper{
+    margin:5px 0 10px 15px;
+}
+.form-wrapper .head-wrapper{
+    margin-bottom:10px;
+    border-bottom:1px dashed #d9d9d9;
+    line-height:35px;
+}
+.form-wrapper .title-wrapper{
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+}
+.form-wrapper .ivu-radio-group,.form-wrapper .ivu-checkbox-group{
+	vertical-align: middle;
+}
+/*单选/复选 垂直显示*/
+.form-wrapper .ivu-radio-group .ivu-radio-wrapper,.form-wrapper .ivu-checkbox-group .ivu-checkbox-wrapper{
+    display: inline-block;
+    margin:5px 2px;
+}
+/*单选/复选 平行显示*/
+.form-wrapper .ivu-radio-group .ivu-radio-wrapper.vertical,.form-wrapper .ivu-checkbox-group .ivu-checkbox-wrapper.vertical{
+    display: block;
+    margin:5px 0;
+}
+.form-wrapper .form-item-wrapper{
+	margin: 5px 0;
+}
+.form-wrapper label{
+	display: inline-block;
+	margin:3px 5px;
+}
+/*时间插件*/
+.form-item-wrapper .td-datepicker-container{
+    width: 50%;
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer; 
+}
+.form-item-wrapper .td-datepicker-container .td-datepicker-clear{
+    font-size: 22px;
+}
+
+
+/* poi */
+.form-item-wrapper-poi{
+    margin: 5px 0;
+    display:-webkit-flex;
+}
+.form-item-wrapper-poi label{
+    display: inline-block;
+    margin:3px 5px;
+}
+
+.form-item-wrapper-poi p{
+    -webkit-flex:1;
+    padding-top:1px;
+}
+.form-swiper-poi{
+display:-webkit-flex;
+}
+
+.form-swiper-poi div{
+    -webkit-flex:1;
+     float:left;
+     padding-right: 10px
+}
+.form-swiper-poi>div>span{
+    float:left;
+    padding:2px 6px 0 0;
+    font-size:12px;
+}
+.form-wrapper-pericope{
+    height:30px;
+}
+.form-wrapper-pericope p{
+    float:left;
+    padding-right:15px;
+}
+.form-wrapper-pericope label{
+    font-size: 12px;
+    padding:3px 3px 0 0;
+
+}
+.form-wrapper-pericope-add{
+    clear:both;
+    display:block;
+    margin-top:3px;
+}
+.form-wrapper-pericope-remove{
+    position: relative;
+    top:3px;
+}
+.form-wrapper-periphery{
+    font-size: 12px
+}

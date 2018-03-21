@@ -1,0 +1,24 @@
+{
+    "statisticDate":"2016-06-01",
+    "data": [{
+        "id": "imei",
+        "equipment": 1675942002,
+        "scale": "49.37%"
+    }, {
+        "id": "idfa",
+        "equipment": 520893896,
+        "scale": "15.35%"
+    }, {
+        "id": "mac",
+        "equipment": 1843697434,
+        "scale": "54.32%"
+    }, {
+        "id": "androidid",
+        "equipment": 1631373043,
+        "scale": "48.06%"
+    }, {
+        "id": "phoneno_md5",
+        "equipment": 199393403,
+        "scale": "5.87%"
+    }]
+}

@@ -1,0 +1,46 @@
+[{
+    "code": 1,
+    "name": "vivo X7"
+}, {
+    "code": 2,
+    "name": "iPhone7"
+}, {
+    "code": 3,
+    "name": "电信"
+}, {
+    "code": 4,
+    "name": "移动"
+}, {
+    "code": 5,
+    "name": "联通"
+}, {
+    "code": 6,
+    "name": "2G"
+}, {
+    "code": 7,
+    "name": "3G"
+}, {
+    "code": 8,
+    "name": "4G"
+}, {
+    "code": 9,
+    "name": "android"
+}, {
+    "code": 10,
+    "name": "ios"
+}, {
+    "code": 11,
+    "name": "1024X768"
+}, {
+    "code": 12,
+    "name": "1440X768"
+}, {
+    "code": 13,
+    "name": "华为"
+}, {
+    "code": 14,
+    "name": "苹果"
+}, {
+    "code": 15,
+    "name": "魅族"
+}]

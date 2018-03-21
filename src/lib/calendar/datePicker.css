@@ -1,0 +1,265 @@
+/* CSS Document*/
+@charset "utf-8";
+
+.td-datepicker-container {
+    position: relative;
+    border: 1px solid #d9d9d9;
+    display: inline-block;
+    min-width: 6rem;
+    border-radius: 6px;
+    height: 2rem;
+    line-height: 2rem;
+    padding: 0 1rem;
+    vertical-align: bottom;
+    width: 100%;
+    box-sizing: border-box
+}
+.td-datepicker-container.top .td-datepicker-content {
+    top: auto;
+    bottom: 2rem
+}
+.td-datepicker-days {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 0 .5rem
+}
+.td-datepicker-days, .td-datepicker-list {
+    background-color: #fff;
+    width: 13rem;
+    height: 14rem;
+    font-size: .8rem
+}
+.td-datepicker-list {
+    text-align: center;
+    overflow-y: auto
+}
+.td-datepicker-list-item:hover {
+    background: #f3f2f2
+}
+.td-day-item, .td-day-week {
+    width: 14%;
+    text-align: center
+}
+.td-day-text {
+    display: inline-block;
+    line-height: 1.5rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    box-sizing: border-box;
+    cursor: pointer
+}
+.td-day-text.unavailable ,.td-datepicker-list-item.disabled{
+    color: #ccc;
+    cursor: not-allowed
+}
+.td-day-text.out-month {
+    color: #ccc
+}
+.td-day-text.selected {
+    border: 1px solid #2db7f5;
+    color: #2db7f5
+}
+.td-day-text:hover {
+    background-color: #c4edff
+}
+.td-datepicker-value>.td-timepicker-container {
+    border: none;
+    padding: 0;
+    min-width: 0;
+    width: 3.2rem
+}
+.td-datepicker-value>.td-timepicker-container .td-timepicker-value-input {
+    width: 100%
+}
+.td-datepicker-value>.td-timepicker-container .td-datepicker-clear {
+    display: none
+}
+.td-datepicker-value-input {
+    border: 0;
+    width: 100%;
+    height: 100%;
+    outline: 0;
+    font-size: .8rem;
+    text-align: center;
+}
+.td-datepicker-info-month, .td-datepicker-info-year {
+    position: relative;
+    width: 50%;
+    text-align: center
+}
+.td-datepicker-info-month .td-datepicker-arrow, .td-datepicker-info-year .td-datepicker-arrow {
+    display: none;
+    position: absolute;
+    cursor: pointer
+}
+.td-datepicker-info-month:hover .td-datepicker-arrow, .td-datepicker-info-year:hover .td-datepicker-arrow {
+    display: initial
+}
+.td-datepicker-month-text, .td-datepicker-year-text {
+    cursor: pointer
+}
+.td-datepicker-arrow.ion-ios-arrow-left {
+    left: .5rem
+}
+.td-datepicker-arrow.ion-ios-arrow-right {
+    right: .5rem
+}
+.ion-ios-arrow-left:before{
+    width:25px;
+    height:20px;
+}
+.ion-ios-arrow-right:before{
+    width:25px;
+    height:20px;
+}
+.td-datepicker-content {
+    border: 1px solid #f3f3f3;
+    position: absolute;
+    left: 0;
+    top: 2rem;
+    z-index: 2
+}
+.td-datepicker-contrl {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #e6e6e6;
+    padding: 0 .5rem
+}
+.td-datepicker-clear {
+    position: absolute;
+    top: 0;
+    left: .3rem;
+}
+.td-datepicker-footer {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: .5rem;
+    border-top: 1px solid #e9e9e9;
+    background-color: #fff
+}
+.td-datepicker-footer, .td-datepicker-value {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
+
+@-webkit-keyframes d {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -1rem, 0);
+        transform: translate3d(0, -1rem, 0)
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+}
+@keyframes d {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -1rem, 0);
+        transform: translate3d(0, -1rem, 0)
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+}
+@-webkit-keyframes e {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+    to {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -1rem, 0);
+        transform: translate3d(0, -1rem, 0)
+    }
+}
+@keyframes e {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+    to {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -1rem, 0);
+        transform: translate3d(0, -1rem, 0)
+    }
+}
+.picker-fade-in-down-transition {
+    -webkit-animation-duration: .2s;
+    animation-duration: .2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both
+}
+.picker-fade-in-down-enter {
+    -webkit-animation-name: d;
+    animation-name: d
+}
+.picker-fade-in-down-leave {
+    -webkit-animation-name: e;
+    animation-name: e
+}
+.td-timepicker-container {
+    position: relative;
+    border: 1px solid #d9d9d9;
+    display: inline-block;
+    min-width: 6rem;
+    border-radius: 6px;
+    height: 2rem;
+    line-height: 2rem;
+    padding: 0 .5rem;
+    vertical-align: bottom
+}
+.td-timepicker-container.top .td-timepicker-content {
+    top: auto;
+    bottom: 2rem
+}
+.td-timepicker-content {
+    border: 1px solid #f3f3f3;
+    position: absolute;
+    left: 0;
+    top: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 9rem;
+    background-color: #fff;
+    text-align: center;
+    z-index: 2
+}
+.td-timepicker-hour, .td-timepicker-min, .td-timepicker-sec {
+    width: 33.33%;
+    height: 8rem;
+    overflow-y: auto
+}
+.td-timepicker-hour>.td-timepicker-item:last-child, .td-timepicker-min>.td-timepicker-item:last-child, .td-timepicker-sec>.td-timepicker-item:last-child {
+    margin-bottom: 6rem
+}
+.td-timepicker-item {
+    cursor: pointer;
+    border-radius: 4px
+}
+.td-timepicker-item.select, .td-timepicker-item:hover {
+    background: #b9e9ff
+}
+.td-timepicker-value-input {
+    border: 0;
+    height: 100%;
+    outline: 0;
+    font-size: .8rem;
+    vertical-align: text-top
+}
+.td-disabled{
+    background: #f7f7f7;
+}

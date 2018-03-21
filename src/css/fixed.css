@@ -1,0 +1,234 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+body {
+  background-color: #FFF;
+}
+
+/**---------------------------start 左侧菜单---------------------------------**/
+.menu-left {
+    z-index: 10;
+    width: 100%;
+    height:70px;
+    padding:10px;
+    background: #363d5d;
+}
+.menu-left ul {
+    float:left;
+}
+.menu-left li {
+    margin-bottom: 1px;
+    padding: 20px 0 20px 44px;
+    border-top: 4px solid transparent;
+    font-size: 16px;
+    color: #d4d9f3;
+    cursor: pointer;
+    float:left;
+    margin-left:10px;
+}
+.menu-left li.active, .menu-left li:hover {
+    border-top: 4px solid #13b4ff;
+    background: #40486f;
+}
+.menu-left li {
+    padding: 0;
+}
+.menu-left li a {
+    display: block;
+    padding: 10px 15px 10px 15px;
+    color: inherit;
+}
+/**---------------------------end 左侧菜单---------------------------------**/
+
+
+.main-content {
+    -webkit-flex:1;
+    width:100%;
+    padding:10px;
+    padding-bottom:0;
+    overflow-y:auto; 
+    margin-bottom:10px !important;
+}
+#app {
+    background: #eee;
+    width: 100%;
+    height:100%;
+    display:-webkit-flex;
+    -webkit-flex-direction:column;
+}
+
+/**-----------------------------AMTIDE -------------------------------**/
+.atm-ide {
+    width: 100%; 
+    padding: 10px;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
+    min-height: 600px;
+ }
+.content{
+	width:100%;
+	display:-webkit-flex;
+}
+.atm-ide .ivu-card.ivu-card-dis-hover.ivu-card-bordered {
+    border: 1px solid #d9d9d9;
+    overflow: hidden
+}
+.atm-ide .ivu-card.ivu-card-dis-hover.ivu-card-bordered:hover {
+    border: 1px solid #d9d9d9;
+}
+.top-wrapper{
+    padding-bottom:10px;
+}
+.top-wrapper label{
+    font-size:14px;
+    padding-right:15px;
+}
+.top-wrapper label:nth-of-type(2){
+    padding-left:10px;
+}
+/*左侧百叶窗*/
+.left-wrapper {
+    width: 98px;
+    min-height: 750px;
+    text-align: center;
+}
+.left-wrapper:hover {
+      background-color: rgba(239,239,239,0.5)
+}
+.left-wrapper .ivu-collapse-content {
+    padding: 0;
+}
+.left-wrapper .ivu-collapse-header {
+    padding-left: 0;
+}
+.left-wrapper .ivu-collapse>.ivu-collapse-item>.ivu-collapse-header {
+    height: 26px;
+    line-height: 26px;
+    padding-left: 0;
+}
+.left-wrapper .accordion-wrapper {
+    width: 100%;
+    min-height: 663px;
+}
+/*中间区域*/
+.main-wrapper {
+    width: 64%;
+    margin: 0 3px;
+    
+}
+
+/*中间区域上部分*/
+.main-up-wrapper {
+    height: 245px;
+    overflow: hidden;
+}
+.main-up-wrapper .fl:first-child {
+    width: calc(56% - 10px);
+    margin-right: 7px;
+    margin-left:1px;
+}
+.main-up-wrapper .fl:first-child:hover {
+      background-color: rgba(239,239,239,0.5)
+}
+.main-up-wrapper .fl:last-child {
+    width: 44%;
+}
+.main-up-wrapper .fl:last-child:hover {
+      background-color: rgba(239,239,239,0.5)
+}
+.main-up-wrapper .ivu-card-body {
+    padding: 5px;
+}
+
+/*输入区 输出区*/
+.diagram-wrapper {
+    width: 100%;
+    height: 180px;
+}
+
+/*中间区域下部分*/
+.main-down-wrapper {
+    margin:5px 1px 0 1px;
+}
+.main-down-wrapper:hover {
+      background-color: rgba(239,239,239,0.5)
+}
+.main-down-wrapper .ivu-card-body{
+    padding-right: 0;
+}
+.console-wrapper {
+    height: 415px;
+    overflow-y: scroll;
+}
+/*右侧区域*/
+.right-wrapper {
+    width: 28%;
+    height: 750px;
+}
+.right-wrapper:hover {
+      background-color: rgba(239,239,239,0.5)
+}
+.right-wrapper .ivu-card-body{
+    height: 95%;
+    overflow-y: scroll;
+    padding:16px 5px 16px 16px;
+}
+/*操作按钮*/
+.btn{
+    text-align: center;
+    position: relative;
+    margin-top:10px;
+}
+/*圆圈*/
+.circle{
+    display: block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    margin-right: 3px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    font-size: 14px;
+    color: #fff;
+}
+/*下拉框颜色*/
+.multiselect__tag,.multiselect__option--highlight,.multiselect__option--highlight:after{
+    background: #33adea;
+}
+.multiselect__tag-icon:after{
+    color: #fff;
+}
+.multiselect__tag-icon:focus, .multiselect__tag-icon:hover{
+    background: #0B82BE;
+}
+/*上传文件*/
+.rd-upload-container{
+    vertical-align: middle;
+}
+.choice-box .ivu-modal-footer .ivu-btn{
+	display:none;
+}
+/*新增资产概览*/
+/*界面统计时间*/
+.statistic_con {
+    height: 30px;
+    width: 200px;
+    margin-bottom: 15px;
+    margin-left:10px;
+    line-height: 30px;
+    font-size: 16px;
+    color: #000;
+}
+.summary {
+    width: 100%;
+    margin: 5px 0px;
+    padding: 15px 15px 15px 15px;
+    border-left: 4px solid #5aacff;
+    background: #fff;
+    box-shadow: 3px 3px 4px #ced3d9;
+    text-align: center;
+}

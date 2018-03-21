@@ -1,0 +1,51 @@
+{
+	"children": [{
+		"children": [{
+				"id": "1032",
+				"isParent": false,
+				"name": "游戏类型"
+			},{
+				"id": "1033",
+				"isParent": false,
+				"name": "游戏题材"
+			},{
+				"id": "1034",
+				"isParent": false,
+				"name": "美术风格"
+			}
+		],
+		"isParent": true,
+		"name": "游戏偏好"
+	},{
+		"children": [{
+				"id": "103212",
+				"isParent": false,
+				"name": "应用类别"
+			}
+		],
+		"isParent": true,
+		"name": "应用兴趣"
+	},{
+		"children": [{
+				"id": "1035",
+				"isParent": false,
+				"name": "性别"
+			},{
+				"id": "1036",
+				"isParent": false,
+				"name": "人生阶段"
+			},{
+				"id": "1037",
+				"isParent": false,
+				"name": "身份职业"
+			},{
+				"id": "1038",
+				"isParent": false,
+				"name": "婚育情况"
+			}
+		],
+		"isParent": true,
+		"name": "人口属性"
+	}]
+	
+}

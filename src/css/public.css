@@ -1,0 +1,142 @@
+/* CSS Document*/
+@charset "utf-8";
+
+* {
+	margin: 0px;
+	padding: 0px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+A {
+	blr: expression(this.onFocus=this.close());
+}
+A {
+	blr: expression(this.onFocus=this.blur());
+}
+A:focus {
+	outline: 0;
+}
+input, button, select, textarea {
+	outline: none;
+}
+textarea {
+	font-size: 12px;
+	resize: none;
+}
+img {
+	border: none;
+	float:left;
+}
+
+.clearfix{
+	clear:both;
+}
+.clearfix:after{
+	display:block;
+	clear:both;
+	content:"";
+	visibility:hidden;
+	height:0;
+}
+html {
+	min-height: 100%;
+	_height: 100%;
+}
+body {
+	margin: 0;
+	padding: 0;
+	min-height: 100%;
+	_height: 100%;
+	background: #eef0f3;
+	color: rgba(0, 0, 0, 0.870588);
+	font-family: "Microsoft Yahei", Arial;
+	font-size: 14px;
+}
+ul, ol {
+	margin: 0;
+	padding: 0;
+}
+li {
+	list-style: none;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+a {
+	text-decoration: none;
+	/*transition: background-color .5s ease 0s, color .5s ease 0s, width .5s ease 0s, border-width .5s ease 0s, border-color .5s ease 0s;
+	-webkit-transition: background-color .5s ease 0s, color .5s ease 0s, width .5s ease 0s, border-width .5s ease 0s, border-color .5s ease 0s;
+	-moz-transition: background-color .5s ease 0s, color .5s ease 0s, width .5s ease 0s, border-width .5s ease 0s, border-color .5s ease 0s;
+	-ms-transition: background-color .5s ease 0s, color .5s ease 0s, width .5s ease 0s, border-width .5s ease 0s, border-color .5s ease 0s;
+	-o-transition: background-color .5s ease 0s, color .5s ease 0s, width .5s ease 0s, border-width .5s ease 0s, border-color .5s ease 0s;*/
+}
+a:active, a:hover {
+	outline: 0;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+.trans {
+	transition: .5s;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+}
+.col-2 {
+	width: 50%;
+}
+.col-3 {
+	width: 33.333%;
+}
+.col-4 {
+	width: 25%;
+}
+.col-5 {
+	width: 20%;
+}
+.col-6 {
+	width: 17%;
+}
+.spacing-20 {
+	padding: 20px;
+}
+.mar-20 {
+	margin: 20px;
+}
+.mar-30 {
+	margin-bottom: 30px;
+}
+.no-border {
+	border: 0 !important;
+}
+
+/* 设置滚动条的样式*/
+::-webkit-scrollbar {
+	width: 6px;
+	height: 6px;
+}
+
+/* 滚动条滑块*/
+::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background: #a9a9a9;
+}
+.scrollbar::-webkit-scrollbar-thumb {
+	visibility: hidden;
+}
+.scrollbar:hover::-webkit-scrollbar-thumb {
+	visibility: visible
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.td-datepicker-content{
+	top:2rem!important;
+}

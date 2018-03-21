@@ -1,0 +1,47 @@
+/**-----------------------------表单通用样式 -------------------------------**/
+.console-item-wrapper{
+    margin:5px 15px 15px 15px;
+}
+.console-item-wrapper fieldset {
+	border: 1px dashed #d9d9d9;
+    min-height: 100px;
+}
+.console-item-wrapper fieldset legend{
+	text-align: center;
+}
+.console-item-wrapper .fieldset-wrapper{
+	margin:5px 10px;
+}
+.fieldset-item-wrapper{
+	margin:4px 0;
+}
+.fieldset-item-wrapper>label{
+	margin-right:3px;
+}
+.fieldset-item-wrapper span{
+	display:inline-block;
+	height: 24px;
+	margin:2px 4px 2px 0;
+	padding: 0 8px;
+	line-height:24px;
+	vertical-align:middle;
+	border-radius:3px;
+	color: #fff;
+	background: #5cb85c;
+	overflow:hidden;
+}
+.fieldset-item-wrapper .circle{
+	display: inline-block;
+	border-color:#5cb85c;
+	background: #5cb85c;
+}
+
+/*控制台输出项--明细*/
+.console-outitem-wrapper .fieldset-item-wrapper>span{
+	background: #f50;
+}
+
+/*控制台输出项--统计*/
+.console-putitem-wrapper .fieldset-item-wrapper>span{
+	background: #5CADFF;
+}

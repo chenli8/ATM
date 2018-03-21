@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" class="fullscreen-page">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <style>
+    .anchorBL{
+      display: none;
+    }
+    </style>
+    <script>
+        //var d = (new Date).getTime();
+        var d = '2015092301451';
+        var require = {
+            baseUrl: 'js',
+            waitSeconds: 15,
+            urlArgs: "bust="+d,
+            deps: ['bundle']
+        };
+        var COMPONENTS_URL = '../components';
+        var BMAP_AK = '4Y8Vw1gQRypwBirx945LRyYf';
+        var _onReadyFns = [];
+        var onReady = function( fn ){
+            _onReadyFns.push(fn);
+        }
+    </script>
+    <script type="text/javascript" src="js/layer/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="js/layer/layer.js"></script>
+    <title>热力图展示</title>
+</head>
+<body class="heatmap-page">
+<div class="wrap" id="App">
+    <header id="Header" class="header">
+        <div class="control">
+            <a href="javascript:;" class="hidden download-btn btn">截取当前热图</a>
+            <a href="javascript:;" class="hidden capture-btn btn">自定义区域截图</a>
+            <a href="javascript:;" class="disabled show-heatmap-btn btn">隐藏热力图</a>
+            <a href="javascript:;" class="hidden btn test-btn">测试按钮</a>
+        </div>
+        <h1 class="page-title" id="PageTitle"></h1>
+    </header>
+    <div id="Sidebar" class="nav-sidebar">
+        <nav class="nav">
+            <h3>所有项目</h3>
+            <ul id="Projects" class="projects"></ul>
+        </nav>
+        <div class="snap-shot">
+            <div class="process-text"></div>
+        </div>
+    </div>
+    <div class="main mod">
+        <div class="bd">
+            <div class="control">
+                <div class="options disabled">
+                        <div class="form-group">
+                            <label>最大值(人)：</label>
+                            <input type="text" class="max-input" value="10" />
+                            <button class="max-submit-btn">确定</button>
+                        </div>
+                        <div class="form-group">
+                            <label>覆盖半径(像素)：</label>
+                            <input type="text" class="radius-input" value="20" />
+                            <button class="radius-submit-btn">确定</button>
+                        </div>
+                        <div class="form-group">
+                            <label>透明度(比例)：</label>
+                            <input type="text" class="opacity-input" value="80" />
+                            <button class="opacity-submit-btn">确定</button>
+                        </div>
+                        <div class="item help">?</div>
+                </div>
+            </div>
+            <div class="block map-wrap">
+                <div class="map-container" id="MapContainer"></div>
+            </div>
+        </div>
+        <footer>
+            <p class="copy">2015 © TalkingData线下数据.</p>
+            <div class="info hidden">
+                位置人次数: <span id="DeviceCount">0</span>
+                位置数: <span id="PointCount">0</span>
+            </div>
+        </footer>
+    </div>
+</div>
+<div class="loading visible">
+    <div class="inner">
+        <span></span>
+        <p>载入中..</p>
+    </div>
+</div>
+<div class="download-snapshot">
+  <div class="inner">
+      <span class="close" title="放弃"></span>
+      <div class="canvas"></div>
+      <p>百度地图访问不稳定会导致地图缺失，可以尝试重新截图</p>
+      <div class="form-group">
+          <label>文件名:</label>
+          <input type="text" />
+          <button class="save">保存</button>
+          <a href="javascript:;" class="cancel">取消</a>
+      </div>
+  </div>
+</div>
+<script type="text/x-handlebars-template" id="template-projects">
+{{#each projects}}
+<li {{#if filter.length}}class="has-filter" {{/if}} data-text="{{text}}" data-type="project" data-value="{{value}}" data-index="{{@index}}">
+<a href="javascript:;">{{text}}</a>
+{{#if filter}}
+<ul class="sub-level-2">
+    {{#each filter}}
+    <li {{#if filter.length}}class="has-filter" {{/if}} data-text="{{text}}" data-type="stay" data-value="{{value}}" data-index="{{@index}}">
+    <a href="javascript:;">{{text}}</a>
+    {{#if filter}}
+    <ul class="sub-level-3">
+        {{#each filter}}
+        <li data-type="filter" data-value="{{value}}" data-text="{{text}}" data-index="{{@index}}"><a href="javascript:;">{{text}}</a>
+        </li>
+        {{/each}}
+    </ul>
+    {{/if}}
+    </li>
+    {{/each}}
+</ul>
+{{/if}}
+</li>
+{{/each}}
+</script>
+<script type="text/html" id="template-help">
+    <div class="flyout flyout-help">
+        <h3>什么是最大值？</h3>
+        <p>最热地点包括的最大人数。例如，设置为100，那么越红的地方就越接近甚至超越100人</p>
+        <h3>什么是热点半径</h3>
+        <p>热力点的显示半径。并不代表地图，根据需求调整以最佳的尺寸显示热力图</p>
+        <h3>什么是透明度</h3>
+        <p>热力图的透明百分比。当热力图太过刺眼以至于遮挡住地图请尝试调小</p>
+    </div>
+</script>
+<script src="components/requirejs/require.js"></script>
+<script>
+    onReady(function(){
+        require(['core','controller/heatMapCtrl'], function(core, heatMapCtrl){
+
+        	var index = parent.layer.getFrameIndex(window.name);
+            var search=window.location.search;
+            var param=search.substring(1,search.length).split("&");
+    		var projectId =param[0].split("=")[1]; //parent.$('#selectedJobId').val();
+    		var projectName =param[1].split("=")[1]; //parent.$('#selectedJobName').val();
+            var project = projectName ||'未知';
+            project && heatMapCtrl({ projectName: projectName,projectId:projectId, url: param[2].split("=")[1]+'heatMapManager/heatmap/' });
+        });
+    });
+</script>
+</body>
+</html>
